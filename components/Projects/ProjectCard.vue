@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card-general-style portfolio-general-style scroll-animation"
+    class="portfolio-wrapper card-general-style portfolio-general-style scroll-animation"
     v-for="project in portfolioData"
     :key="project.id"
     :style="{ '--accent-color': project.accentColor }"
@@ -94,7 +94,7 @@ li::before {
   margin-bottom: -40px;
 }
 
-.portfolio__img:hover img {
+.portfolio-wrapper:hover img {
   filter: brightness(50%);
 }
 
@@ -125,7 +125,7 @@ li::before {
   z-index: 100;
 }
 
-.portfolio__img:hover .hover-link {
+.portfolio-wrapper:hover .hover-link {
   opacity: 1;
 }
 
