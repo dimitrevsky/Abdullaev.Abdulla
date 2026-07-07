@@ -32,11 +32,11 @@
     </div>
 
     <div class="portfolio__img">
-      <img class="project__img" :src="project.image" :alt="`Image of ${project.title}`" />
+      <NuxtLink :to="project.link" target="_blank">
+        <img class="project__img" :src="project.image" :alt="`Image of ${project.title}`" />
+      </NuxtLink>
       <div class="hover-link">
-        <a :href="project.link" target="_blank">
-          <p class="normal-font-general">Перейти на сайт</p>
-        </a>
+        <p class="normal-font-general">Перейти на сайт</p>
       </div>
 
       <div class="light-animation"></div>
@@ -122,6 +122,7 @@ li::before {
   transform: translate(-50%, -50%);
   position: absolute;
   transition: all 0.1s linear;
+  cursor: pointer;
   z-index: 100;
 }
 
